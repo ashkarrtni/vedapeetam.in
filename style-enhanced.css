@@ -1,0 +1,487 @@
+/*
+=============================================================
+  VEDAPEETAM — Enhanced Design System
+  style-enhanced.css  (loaded after style.css to override)
+=============================================================*/
+
+/* ── 1. FONT OVERRIDES ──────────────────────────────────── */
+:root {
+  --vp-gold:       #9A7B4F;
+  --vp-gold-light: #C8A96E;
+  --vp-dark:       #1C1915;
+  --vp-cream:      #F8F4EE;
+  --vp-warm:       #F2EBE0;
+  --vp-text:       #4A3F35;
+  --vp-muted:      #8C7B6E;
+  --vp-border:     #E4D9CC;
+  --radius:        6px;
+  --shadow-sm:     0 2px 12px rgba(28,25,21,0.08);
+  --shadow-md:     0 8px 32px rgba(28,25,21,0.14);
+  --transition:    all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Jost', 'Raleway', sans-serif;
+  color: var(--vp-text);
+  background: #fff;
+}
+
+h1, h2, h3, .banner-title, .section-title, .item-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* ── 2. TOP BAR ─────────────────────────────────────────── */
+.top-content {
+  background: var(--vp-dark);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 8px 0;
+}
+.top-content .social-links ul li a {
+  color: var(--vp-muted);
+  font-size: 13px;
+  transition: var(--transition);
+}
+.top-content .social-links ul li a:hover { color: var(--vp-gold-light); }
+.top-content .for-buy,
+.top-content .user-account { color: rgba(255,255,255,0.7); font-size: 13px; }
+.top-content .for-buy:hover { color: var(--vp-gold-light); }
+
+/* ── 3. HEADER ──────────────────────────────────────────── */
+#header {
+  background: #fff;
+  box-shadow: 0 1px 0 var(--vp-border);
+  padding: 0;
+}
+#header .main-logo img { max-height: 94px; width: auto; }
+
+.menu-list > .menu-item > a {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--vp-dark);
+  padding: 28px 18px;
+  transition: var(--transition);
+}
+.menu-list > .menu-item > a:hover,
+.menu-list > .menu-item.active > a { color: var(--vp-gold); }
+
+/* ── 4. BANNER EYEBROW ──────────────────────────────────── */
+.banner-eyebrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--vp-gold-light);
+  margin-bottom: 14px;
+  display: block;
+}
+.banner-title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+}
+
+/* ── 5. SECTION HEADERS ─────────────────────────────────── */
+.section-header .title span {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--vp-gold);
+}
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--vp-dark);
+  font-weight: 400;
+}
+
+/* ── 6. BOOK CARDS ──────────────────────────────────────── */
+.book-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid var(--vp-border);
+  cursor: pointer;
+}
+.book-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--vp-gold-light);
+}
+
+/* overlay on figure */
+.product-style {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+.product-style img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+.book-card:hover .product-style img { transform: scale(1.04); }
+
+.book-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 25, 21, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.book-card:hover .book-overlay { opacity: 1; }
+
+.read-book-btn {
+  background: var(--vp-gold);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 40px;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.read-book-btn:hover { background: var(--vp-gold-light); transform: scale(1.04); }
+
+/* figcaption inside book-card */
+.book-card figcaption {
+  padding: 14px 16px 18px;
+}
+.book-card figcaption h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--vp-dark);
+  margin: 6px 0 2px;
+  line-height: 1.25;
+}
+.book-card figcaption span {
+  font-size: 12px;
+  color: var(--vp-muted);
+}
+.book-card .item-price {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--vp-gold);
+  margin-top: 6px;
+}
+
+/* ── 7. LANGUAGE TAGS ───────────────────────────────────── */
+.book-lang-tag {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 40px;
+  margin-bottom: 4px;
+}
+.book-lang-tag.malayalam { background: #EEF5F0; color: #3A7A4E; }
+.book-lang-tag.english   { background: #EEF2FA; color: #2D56A0; }
+.book-lang-tag.kannada   { background: #FDF3E9; color: #A05A2D; }
+
+/* ── 8. POPULAR BOOKS — LANGUAGE TABS ──────────────────── */
+.lang-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 48px;
+}
+.lang-tabs .tab {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: var(--vp-muted);
+  padding: 9px 26px;
+  border-radius: 40px;
+  border: 1.5px solid var(--vp-border);
+  cursor: pointer;
+  transition: var(--transition);
+  user-select: none;
+}
+.lang-tabs .tab:hover {
+  border-color: var(--vp-gold);
+  color: var(--vp-gold);
+}
+.lang-tabs .tab.active {
+  background: var(--vp-gold);
+  border-color: var(--vp-gold);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(154,123,79,0.35);
+}
+
+/* ── 9. BEST SELLING — inline read button ───────────────── */
+.read-book-btn-inline {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--vp-dark);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.read-book-btn-inline:hover { color: var(--vp-gold); }
+
+/* ── 10. SPECIAL OFFER — carousel cards ────────────────── */
+#special-offer .product-item.book-card {
+  display: inline-block;
+  cursor: pointer;
+}
+#special-offer .product-style img {
+  aspect-ratio: 3/4;
+}
+
+/* ── 11. PDF MODAL ──────────────────────────────────────── */
+.pdf-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(20, 17, 13, 0.82);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.pdf-modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.pdf-modal-container {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 960px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+  overflow: hidden;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+.pdf-modal-overlay.open .pdf-modal-container {
+  transform: translateY(0);
+}
+
+.pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--vp-border);
+  background: var(--vp-cream);
+  flex-shrink: 0;
+}
+.pdf-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--vp-dark);
+}
+.pdf-icon { font-size: 1.3rem; }
+
+.pdf-modal-actions { display: flex; align-items: center; gap: 10px; }
+
+.pdf-btn-outline {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--vp-gold);
+  border: 1.5px solid var(--vp-gold);
+  padding: 6px 16px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.pdf-btn-outline:hover { background: var(--vp-gold); color: #fff; }
+
+.pdf-close-btn {
+  background: var(--vp-dark);
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.pdf-close-btn:hover { background: #8B0000; }
+
+.pdf-modal-body {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.pdf-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--vp-cream);
+  gap: 14px;
+  font-family: 'Jost', sans-serif;
+  color: var(--vp-muted);
+  font-size: 14px;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+.pdf-loading.hidden { opacity: 0; pointer-events: none; }
+
+.pdf-spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid var(--vp-border);
+  border-top-color: var(--vp-gold);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+#pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ── 12. BUTTONS ────────────────────────────────────────── */
+.btn-outline-accent {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 40px;
+  transition: var(--transition);
+}
+.btn-outline-accent:hover {
+  background: #fff;
+  color: var(--vp-gold);
+  border-color: #fff;
+}
+
+.btn-accent-arrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--vp-dark);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1.5px solid var(--vp-gold);
+  padding-bottom: 2px;
+  transition: var(--transition);
+}
+.btn-accent-arrow:hover { color: var(--vp-gold); }
+
+/* ── 13. SUBSCRIBE SECTION ──────────────────────────────── */
+#subscribe { background: var(--vp-warm); padding: 64px 0; }
+#subscribe input[type="email"] {
+  border: 1px solid var(--vp-border);
+  border-radius: 4px 0 0 4px;
+  padding: 12px 18px;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+}
+#subscribe .btn-subscribe {
+  background: var(--vp-gold);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 0 4px 4px 0;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+#subscribe .btn-subscribe:hover { background: var(--vp-gold-light); }
+
+/* ── 14. FOOTER ─────────────────────────────────────────── */
+#footer {
+  background: var(--vp-dark);
+  color: rgba(255,255,255,0.65);
+  padding: 56px 0 32px;
+}
+#footer h5 {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--vp-gold-light);
+  margin-bottom: 18px;
+}
+#footer .menu-list a {
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  transition: var(--transition);
+}
+#footer .menu-list a:hover { color: var(--vp-gold-light); }
+#footer .footer-logo { max-width: 140px; filter: brightness(0) invert(1); opacity: 0.8; }
+#footer .company-brand p {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 12px;
+  line-height: 1.7;
+}
+#footer-bottom { background: #111; padding: 16px 0; }
+#footer-bottom p, #footer-bottom a { font-size: 12px; color: rgba(255,255,255,0.35); }
+#footer-bottom a:hover { color: var(--vp-gold-light); }
+
+/* ── 15. RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .lang-tabs { gap: 6px; }
+  .lang-tabs .tab { padding: 8px 18px; font-size: 12px; }
+  .pdf-modal-container { height: 95vh; max-width: 100%; border-radius: 8px; }
+  .banner-eyebrow { font-size: 10px; }
+}
+@media (max-width: 480px) {
+  .pdf-modal-header { padding: 10px 14px; flex-wrap: wrap; gap: 8px; }
+  .pdf-modal-title { font-size: 1rem; }
+}

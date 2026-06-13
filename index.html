@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VEDAPEETAM — International Spiritual Research Foundation</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="style-enhanced.css">
+	<link rel="stylesheet" type="text/css" href="style-vpi-theme.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
+
+<!-- PDF VIEWER MODAL -->
+<div id="pdf-modal" class="pdf-modal-overlay">
+	<div class="pdf-modal-container">
+		<div class="pdf-modal-header">
+			<div class="pdf-modal-title">
+				<span class="pdf-icon">&#128214;</span>
+				<span id="pdf-book-title">Book Reader</span>
+			</div>
+			<div class="pdf-modal-actions">
+				<a id="pdf-open-tab" href="#" target="_blank" class="pdf-btn-outline">Open in New Tab</a>
+				<button id="pdf-close" class="pdf-close-btn" title="Close">&times;</button>
+			</div>
+		</div>
+		<div class="pdf-modal-body">
+			<div class="pdf-loading" id="pdf-loading">
+				<div class="pdf-spinner"></div>
+				<p>Opening book...</p>
+			</div>
+			<iframe id="pdf-iframe" src="" title="Book Reader"></iframe>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="header-wrap">
+	<!-- <div class="top-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="social-links">
+						<ul>
+							<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon icon-youtube-play"></i></a></li>
+							<li><a href="#"><i class="icon icon-behance-square"></i></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="right-element">
+						<a href="#" class="user-account for-buy"><i class="icon icon-user"></i><span>Account</span></a>
+						<a href="#" class="cart for-buy"><i class="icon icon-clipboard"></i><span>Cart: (0 &#8377;)</span></a>
+						<div class="action-menu">
+							<div class="search-bar">
+								<a href="#" class="search-button search-toggle" data-selector="#header-wrap"><i class="icon icon-search"></i></a>
+								<form role="search" method="get" class="search-box">
+									<input class="search-field text search-input" placeholder="Search books..." type="search">
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	-->
+	<header id="header">
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col-md-2">
+					<div class="main-logo">
+						<a href="index.html"><img src="images/main-logo.png" alt="Vedapeetam Logo"></a>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<nav id="navbar">
+						<div class="main-menu stellarnav">
+							<ul class="menu-list">
+								<li class="menu-item active"><a href="#home">Home</a></li>
+								<!-- <li class="menu-item has-sub">
+									<a href="#pages" class="nav-link">Pages</a>
+									<ul>
+										<li class="active"><a href="index.html">Home</a></li>
+										<li><a href="index.html">About</a></li>
+										<li><a href="index.html">Contact</a></li>
+									</ul>
+								</li> -->
+								<li class="menu-item"><a href="#about-us" class="nav-link">About Us</a></li>
+								<li class="menu-item"><a href="#popular-books" class="nav-link">Books & Languages</a></li>
+								<li class="menu-item"><a href="#featured-books" class="nav-link">Current Books</a></li>
+								<li class="menu-item"><a href="#special-offer" class="nav-link">Upcoming Books</a></li>
+							</ul>
+							<div class="hamburger">
+								<span class="bar"></span>
+								<span class="bar"></span>
+								<span class="bar"></span>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+</div>
+
+<!-- HERO -->
+<section id="billboard" data-nav="home">
+
+	<div class="vpi-hero-bg1">
+		<!-- Cosmic/space-inspired decorative blobs -->
+		<div class="vpi-blob vpi-blob-1"></div>
+		<div class="vpi-blob vpi-blob-2"></div>
+		<div class="vpi-blob vpi-blob-3"></div>
+	</div>
+	
+	<div class="container vpi-hero-inner1">
+		<!-- Top welcome badge -->
+		<div class="vpi-welcome-badge">Welcome to</div>
+
+		<!-- Main Title -->
+		<h1 class="vpi-hero-title">
+			VEDA PEETAM INTERNATIONAL<br>SPIRITUAL RESEARCH FOUNDATION
+		</h1>
+		<p class="vpi-hero-subtitle">
+			<span class="vpi-subtitle-tag">(VPI SRF)</span><br>
+			Free Reading Website
+		</p>
+
+		<!-- Gurus section -->
+		<div class="vpi-gurus-label">Respected Gurus</div>
+
+		<div class="vpi-gurus-row">
+			<!-- Guru 1 -->
+			<div class="vpi-guru-card">
+				<div class="vpi-guru-img-wrap">
+					<img src="images/guru1.jpg" alt="A Srisha Devapoojithaya" class="vpi-guru-img">
+				</div>
+				<div class="vpi-guru-info">
+					<p class="vpi-guru-name">A SRISHA DEVAPOOJITHAYA</p>
+					<p class="vpi-guru-title">Retired Professor of English<br>(Gov College Kasaragod)</p>
+				</div>
+			</div>
+
+			<!-- Guru 2 (center - featured) -->
+			<div class="vpi-guru-card vpi-guru-center">
+				<div class="vpi-guru-img-wrap vpi-guru-img-featured">
+					<img src="images/guru2.jpg" alt="Dr. K.K Subramanyan IRS" class="vpi-guru-img">
+				</div>
+				<div class="vpi-guru-info">
+					<p class="vpi-guru-name">DR.(hc) K.K SUBRAMANYAN IRS</p>
+					<p class="vpi-guru-title">(Rtd) Gov Of India</p>
+				</div>
+			</div>
+
+			<!-- Guru 3 -->
+			<div class="vpi-guru-card">
+				<div class="vpi-guru-img-wrap">
+					<img src="images/guru3.jpg" alt="Acharya Dr. Joy Joseph" class="vpi-guru-img">
+				</div>
+				<div class="vpi-guru-info">
+					<p class="vpi-guru-name">ACHARYA DR. JOY JOSEPH</p>
+					<p class="vpi-guru-title">Registered medical practitioner<br>(Alternative medicine)</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- CTA -->
+		<!-- <div class="vpi-hero-cta">
+			<a href="#popular-books" class="vpi-cta-btn">Explore Books</a>
+		</div> -->
+	</div>
+</section>
+
+<section id="about-us" class="leaf-pattern-overlay">
+
+	<div class="vpi-hero-bg">
+
+		<div class="vpi-blob vpi-blob-1"></div>
+		<div class="vpi-blob vpi-blob-2"></div>
+		<div class="vpi-blob vpi-blob-3"></div>
+	</div>
+<!-- 
+	<div class="container vpi-hero-inner">
+		<div class="row">
+			<div class="col-md-12">
+				<button class="prev slick-arrow"><i class="icon icon-arrow-left"></i></button>
+				<div class="main-slider pattern-overlay">
+					<div class="slider-item">
+						<div class="banner-content">
+							<div class="banner-eyebrow">Founder and Author</div>
+							<h2 class="banner-title">About Us</h2>
+							<p>Spirituality and materiality are movements in two directions from a single point, the mind. In this, I refer to the movement towards the self as spirituality and the movement towards the material as materiality. But what can be understood from this material world is that humanity has not yet understood the truth that both of these originate from the mind. In this material world, humanity exists because of interdependence. In a sense, it can exist. Although all living beings except humans depend on each other to some extent, living beings do not depend on each other for the needs of life. Instead, they depend on nature. But humans exist through interdependence rather than dependence on nature. The result of all good and bad events that occur in the interdependent human race affects only the human mind. Man is the owner of a mind that cannot recognize or understand this truth. What is the greatest power in this material world? Have you ever thought.! The greatest power, is the human mind, which works in the form of mysterious energy.
+								A man is exhausted by his mind, but that means that the greatest power in the world has been broken. Humans have found many ways to recover from such a breakdown. This is called entertainment. Writing, reading, acting, singing, various games, etc. are all exercises for the human mind. The benefits of exercising in any art are greater than the benefits it gives to the body or the pleasure it gives to the mind. All this is possible because of interdependence. I
+								intended my writing style to be like this. My intention was that the essence of my spirituality should be useful to those who are pursuing education in any field, those who are acquiring similar knowledge, and those who are doing research. Combining spirituality, modernity and materialism, I am treading a path that the scientific world has not yet traveled, and readers can join me on my journey, whether through writing or through a spiritual journey. I understand that one can only progress in life through one's innate ability when one is aligned with one's
+								interest, spiritual essence or aptitude. The aim of Veda Peetam Spiritual Research Foundation is to enable readers to acquire material knowledge by spiritually awakening the doubts, questions and wonders inherent within them
+							</p>
+							
+						</div>
+						<img src="images/main-banner1.png" alt="banner" class="banner-image">
+						
+					</div>
+				</div>
+				<button class="next slick-arrow"><i class="icon icon-arrow-right"></i></button>
+			</div>
+		</div>
+	</div>
+
+	-->
+
+	<div class="container vpi-hero-inner">
+		<div class="row align-items-center">
+
+			<!-- Content -->
+			<div class="col-lg-8 order-1 order-md-1">
+				<div class="banner-content">
+					<h2 class="banner-title">About Us</h2>
+					<p>
+						Spirituality and materiality are movements in two directions from a single point, the mind. In this, I refer to the movement towards the self as spirituality and the movement towards the material as materiality. But what can be understood from this material world is that humanity has not yet understood the truth that both of these originate from the mind. In this material world, humanity exists because of interdependence. In a sense, it can exist. Although all living beings except humans depend on each other to some extent, living beings do not depend on each other for the needs of life. Instead, they depend on nature. But humans exist through interdependence rather than dependence on nature. The result of all good and bad events that occur in the interdependent human race affects only the human mind. Man is the owner of a mind that cannot recognize or understand this truth. What is the greatest power in this material world? Have you ever thought.! The greatest power, is the human mind, which works in the form of mysterious energy.<br>
+						A man is exhausted by his mind, but that means that the greatest power in the world has been broken. Humans have found many ways to recover from such a breakdown. This is called entertainment. Writing, reading, acting, singing, various games, etc. are all exercises for the human mind. The benefits of exercising in any art are greater than the benefits it gives to the body or the pleasure it gives to the mind. All this is possible because of interdependence. I
+						intended my writing style to be like this. My intention was that the essence of my spirituality should be useful to those who are pursuing education in any field, those who are acquiring similar knowledge, and those who are doing research. Combining spirituality, modernity and materialism, I am treading a path that the scientific world has not yet traveled, and readers can join me on my journey, whether through writing or through a spiritual journey. I understand that one can only progress in life through one's innate ability when one is aligned with one's
+						interest, spiritual essence or aptitude. The aim of Veda Peetam Spiritual Research Foundation is to enable readers to acquire material knowledge by spiritually awakening the doubts, questions and wonders inherent within them
+					</p>
+				</div>
+			</div>
+
+			<!-- Image -->
+			<div class="col-lg-4 text-center order-2 order-md-2">
+				<img src="images/main-banner1.png"
+				alt="Founder"
+				class="img-fluid founder-img">
+
+				<div class="banner-eyebrow">Founder and Author</div>
+				<div class="founder-details mt-3">
+					<h4>SRI LAKSHMANAN SHASTHAMGOD</h4>
+					<p>
+						FOUNDER OF V.P.I.S.R.F
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container vpi-hero-inner">
+		<div class="row align-items-center">
+
+			<!-- Content -->
+			<div class="col-lg-8 order-1 order-md-1">
+				<div class="banner-content">
+					<!-- <h2 class="banner-title">About Us</h2> -->
+					<p>
+						I am participating in providing an opportunity to read all the books of my friend Sri Lakshmanan Shasthamgod for free in Malayalam, English and Kannada. Sri Shasthamgod has a writing style that combines spirituality and modernity. He also has a writing style that combines innovative ideas that the scientific world has not yet discovered. I am referring to a fact and truth mentioned in Sri Shasthamgod's book. That mention is that the existence and movement of humanity is possible through writing and reading. I would like to say that when we read Sri Shasthamgod's book, just as we gain material knowledge, we also gain knowledge in the spiritual realm. We have provided an opportunity to readers around the world to read Sri Lakshmanan Shasthamgod's books for free through our website. A humble effort by Veda peetam International Spiritual Research Foundation to help you awaken your innate abilities
+					</p>
+				</div>
+			</div>
+
+			<!-- Image -->
+			<div class="col-lg-4 text-center order-2 order-md-2">
+				<img src="images/a.jpg"
+				alt="Founder"
+				class="img-fluid founder-img">
+
+				<!-- <div class="banner-eyebrow">Founder and Author</div> -->
+				<div class="founder-details mt-3">
+					<h4>DR: BHARATH RAJ K GATTY</h4>
+					<p>
+						PRESIDENT OF VPI SRF & CEO-VRUKSHA CORPORATION (Pvt Ltd) KERALA & KARNATAKA 
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container vpi-hero-inner">
+		<div class="row align-items-center">
+
+			<!-- Content -->
+			<div class="col-lg-8 order-1 order-md-1">
+				<div class="banner-content">
+					<!-- <h2 class="banner-title">About Us</h2> -->
+					<p>
+						I hope that the books of Sri Lakshmanan Shasthamgod will be helpful in cultivating innovative ideas among readers, students, researchers, philosophers, spiritualists and everyone. They are available free of cost through our website vedapeetam.in. I request all the readers across the world to make the most of this facility.
+					</p>
+				</div>
+			</div>
+
+			<!-- Image -->
+			<div class="col-lg-4 text-center order-2 order-md-2">
+				<img src="images/d.jpg"
+				alt="Founder"
+				class="img-fluid founder-img">
+
+				<!-- <div class="banner-eyebrow">Founder and Author</div> -->
+				<div class="founder-details mt-3">
+					<h4>DR. MADHAVA THEKKEKARE</h4>
+					<p>
+						COORDINATOR  OF of VPI SRF
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="container vpi-hero-inner">
+		<div class="row align-items-center">
+
+			<!-- Content -->
+			<div class="col-lg-8 order-1 order-md-1">
+				<div class="banner-content">
+					<!-- <h2 class="banner-title">About Us</h2> -->
+					<p>
+						Spirituality" is a voyage through our own "Spirit", an indiscribable force responsible for Origin, Existence, and End of everything. We, the human beings call it "Life- force -Energy", the force that makes countless things, both visible and invisible exist in this world for a while. All these are nothing but the manifestation of the same Spirit. Spirituality is the study of these manifestions. Great thinkers have called it "Self Realisation." Whats Self? Its that same Spirit. Why are we manifested in human forms? Why are Stones formed the way the are? Why are there birds? Why the humans differ in their nature, Colour, tastes and so on? Whats the ultimate purpose of this world? Its easy to ignore all these questions. But the thinkers like Sri. Lakshmanan Shasthamgod, are not ready to ignore such questions. They think and rethink, search and research until they find the correct answer. Sri. Lakshmanan Shasthamgod's books deal with such difficult topics that even the modern Science has not fully addressed. He has created a website, called "Veda Peetam International", to share his findings, for free. I request all the Spirituality lovers across the world to make the best use of the books of Sri. Lakshmanan Shasthamgod, available on the website of "Veda Peetam international -Spiritual Research Foundation.
+					</p>
+				</div>
+			</div>
+
+			<!-- Image -->
+			<div class="col-lg-4 text-center order-2 order-md-2">
+				<img src="images/b.jpg"
+				alt="Founder"
+				class="img-fluid founder-img">
+
+				<!-- <div class="banner-eyebrow">Founder and Author</div> -->
+				<div class="founder-details mt-3">
+					<h4>Dr. Dhananjayan MBBS MS </h4>
+					<p>
+						Rtd General Hospital Ernakulam  & Vice President of VPI SRF
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+</section>
+
+
+
+<style>
+	.founder-img{
+    max-width: 100%;
+    height: auto;
+}
+
+.founder-details h4{
+	    color: #ffe500;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.designation{
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .banner-content{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .founder-details{
+        margin-bottom: 20px;
+    }
+}
+</style>
+
+
+
+<!-- CLIENTS -->
+<!-- <section id="client-holder" data-aos="fade-up">
+	<div class="container">
+		<div class="row">
+			<div class="inner-content">
+				<div class="logo-wrap">
+					<div class="grid">
+						<a href="#"><img src="images/client-image1.png" alt="client"></a>
+						<a href="#"><img src="images/client-image2.png" alt="client"></a>
+						<a href="#"><img src="images/client-image3.png" alt="client"></a>
+						<a href="#"><img src="images/client-image4.png" alt="client"></a>
+						<a href="#"><img src="images/client-image5.png" alt="client"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+
+
+
+
+<!-- BEST SELLING -->
+<section id="best-selling" class="leaf-pattern-overlay">
+	<div class="corner-pattern-overlay"></div>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="row align-items-center">
+					<div class="col-md-6">
+						<figure class="products-thumb">
+							<img src="images/single-image.jpeg" alt="book" class="single-image">
+						</figure>
+					</div>
+					<div class="col-md-6">
+						<div class="product-entry">
+							<h2 class="section-title divider">Best Selling Book</h2>
+							<div class="products-content">
+								<div class="author-name">By Vedapeetam Foundation</div>
+								<h3 class="item-title">SARWAM SHRUTHI KANNADA</h3>
+								<p>A profound exploration of consciousness and the self, guiding readers towards inner awakening and liberation through ancient Vedic wisdom.</p>
+								<div class="item-price">Free to Read</div>
+								<div class="btn-wrap mt-3">
+									<button class="btn-accent-arrow read-book-btn-inline" data-pdf="pdfs/kannada.pdf" data-title="Athma Darshanam">
+										Read Now <i class="icon icon-ns-arrow-right"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- POPULAR BOOKS - 4 TABS -->
+<section id="popular-books" class="bookshelf py-5 my-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="section-header align-center">
+					<div class="title"><span>Browse by language</span></div>
+					<h2 class="section-title">Books & Languages</h2>
+				</div>
+
+				<ul class="tabs lang-tabs">
+					<li data-tab-target="#all-language" class="active tab">All Language</li>
+					<li data-tab-target="#malayalam-tab" class="tab">Malayalam</li>
+					<li data-tab-target="#english-tab" class="tab">English</li>
+					<li data-tab-target="#kannada-tab" class="tab">Kannada</li>
+				</ul>
+
+				<div class="tab-content">
+
+					<!-- ALL LANGUAGE -->
+					<div id="all-language" data-tab-content class="active">
+						<div class="row g-4">
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Athmaroopam">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Athmaroopam"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag malayalam">Malayalam</span><h3>Athmaroopam</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Inner Peace">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Inner Peace"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag english">English</span><h3>Inner Peace</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Vedic Sutras">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Vedic Sutras"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag kannada">Kannada</span><h3>Vedic Sutras</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Enlightenment Path">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Enlightenment Path"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag english">English</span><h3>Enlightenment Path</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Jnana Deepam">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Jnana Deepam"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag malayalam">Malayalam</span><h3>Jnana Deepam</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Spiritual Discourse">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Spiritual Discourse"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag english">English</span><h3>Spiritual Discourse</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Kannada Wisdom">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Kannada Wisdom"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag kannada">Kannada</span><h3>Kannada Wisdom</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Brahma Vidya">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Brahma Vidya"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag malayalam">Malayalam</span><h3>Brahma Vidya</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- MALAYALAM -->
+					<div id="malayalam-tab" data-tab-content>
+						<div class="row g-4">
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Athmaroopam">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Athmaroopam"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag malayalam">Malayalam</span><h3>Athmaroopam</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Jnana Deepam">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Jnana Deepam"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag malayalam">Malayalam</span><h3>Jnana Deepam</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Brahma Vidya">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Brahma Vidya"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag malayalam">Malayalam</span><h3>Brahma Vidya</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Athma Darshanam">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Athma Darshanam"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag malayalam">Malayalam</span><h3>Athma Darshanam</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- ENGLISH -->
+					<div id="english-tab" data-tab-content>
+						<div class="row g-4">
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Inner Peace">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Inner Peace"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag english">English</span><h3>Inner Peace</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Enlightenment Path">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Enlightenment Path"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag english">English</span><h3>Enlightenment Path</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Spiritual Discourse">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Spiritual Discourse"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag english">English</span><h3>Spiritual Discourse</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="The Spiritual Path">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="The Spiritual Path"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag english">English</span><h3>The Spiritual Path</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- KANNADA -->
+					<div id="kannada-tab" data-tab-content>
+						<div class="row g-4">
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Vedic Sutras">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Vedic Sutras"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag kannada">Kannada</span><h3>Vedic Sutras</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Kannada Wisdom">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Kannada Wisdom"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag kannada">Kannada</span><h3>Kannada Wisdom</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Vedic Wisdom">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Vedic Wisdom"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag kannada">Kannada</span><h3>Vedic Wisdom</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="product-item book-card" data-pdf="pdfs/dharma-marga.pdf" data-title="Dharma Marga">
+									<figure class="product-style"><img src="images/tab-item1.jpeg" alt="Dharma Marga"><div class="book-overlay"><button class="read-book-btn">&#128214; Read Now</button></div></figure>
+									<figcaption><span class="book-lang-tag kannada">Kannada</span><h3>Dharma Marga</h3><span>Vedapeetam</span><div class="item-price">Free</div></figcaption>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div><!-- .tab-content -->
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+<!-- FEATURED BOOKS -->
+<section id="featured-books" class="py-5 my-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-header align-center">
+					<div class="title"><span>Curated spiritual texts</span></div>
+					<h2 class="section-title">Current Books</h2>
+				</div>
+				<div class="product-list" data-aos="fade-up">
+					<div class="row g-4">
+
+						<div class="col-md-3 col-sm-6">
+							<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Athmaroopam" data-lang="malayalam">
+								<figure class="product-style">
+									<img src="images/product-item1.jpeg" alt="Athmaroopam" class="product-item">
+									<div class="book-overlay">
+										<button class="read-book-btn">&#128214; Read Now</button>
+									</div>
+								</figure>
+								<figcaption>
+									<span class="book-lang-tag malayalam">Malayalam</span>
+									<h3>Athmaroopam</h3>
+									<span>Vedapeetam</span>
+									<div class="item-price">Free</div>
+								</figcaption>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Athmaroopam Vol. 2" data-lang="malayalam">
+								<figure class="product-style">
+									<img src="images/product-item1.jpeg" alt="Athmaroopam Vol 2" class="product-item">
+									<div class="book-overlay">
+										<button class="read-book-btn">&#128214; Read Now</button>
+									</div>
+								</figure>
+								<figcaption>
+									<span class="book-lang-tag malayalam">Malayalam</span>
+									<h3>Athmaroopam Vol. 2</h3>
+									<span>Vedapeetam</span>
+									<div class="item-price">Free</div>
+								</figcaption>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="The Spiritual Path" data-lang="english">
+								<figure class="product-style">
+									<img src="images/product-item1.jpeg" alt="The Spiritual Path" class="product-item">
+									<div class="book-overlay">
+										<button class="read-book-btn">&#128214; Read Now</button>
+									</div>
+								</figure>
+								<figcaption>
+									<span class="book-lang-tag english">English</span>
+									<h3>The Spiritual Path</h3>
+									<span>Vedapeetam</span>
+									<div class="item-price">Free</div>
+								</figcaption>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-sm-6">
+							<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Vedic Wisdom" data-lang="kannada">
+								<figure class="product-style">
+									<img src="images/product-item1.jpeg" alt="Vedic Wisdom" class="product-item">
+									<div class="book-overlay">
+										<button class="read-book-btn">&#128214; Read Now</button>
+									</div>
+								</figure>
+								<figcaption>
+									<span class="book-lang-tag kannada">Kannada</span>
+									<h3>Vedic Wisdom</h3>
+									<span>Vedapeetam</span>
+									<div class="item-price">Free</div>
+								</figcaption>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col-md-12">
+						<div class="btn-wrap align-right">
+							<a href="#popular-books" class="btn-accent-arrow">View all books <i class="icon icon-ns-arrow-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- QUOTE -->
+<section id="quotation" class="align-center pb-5 mb-5">
+	<div class="inner-content">
+		<h2 class="section-title divider">Quote of the Day</h2>
+		<blockquote data-aos="fade-up">
+			<q>&#8220;The more that you read, the more things you will know. The more that you learn, the more places you&#8217;ll go.&#8221;</q>
+			<div class="author-name">Dr. Seuss</div>
+		</blockquote>
+	</div>
+</section>
+
+<!-- SPECIAL OFFER -->
+<section id="special-offer" class="bookshelf pb-5 mb-5">
+	<div class="section-header align-center">
+		<div class="title"><span>Grab your opportunity</span></div>
+		<h2 class="section-title">Upcoming Books</h2>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="inner-content">
+				<div class="product-list" data-aos="fade-up">
+					<div class="grid product-grid">
+						<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Simple Way of Peaceful Life">
+							<figure class="product-style"><img src="images/product-item5.jpeg" alt="Book"><div class="book-overlay"><button class="read-book-btn">&#128214; Read</button></div></figure>
+							<figcaption><h3>Simple Way of Peaceful Life</h3><span>Vedapeetam</span><div class="item-price"><span class="prev-price">&#8377; 50.00</span>&#8377; 40.00</div></figcaption>
+						</div>
+						<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Great Travel at Desert">
+							<figure class="product-style"><img src="images/product-item6.jpeg" alt="Book"><div class="book-overlay"><button class="read-book-btn">&#128214; Read</button></div></figure>
+							<figcaption><h3>Great Travel at Desert</h3><span>Sanchit Howdy</span><div class="item-price"><span class="prev-price">&#8377; 30.00</span>&#8377; 38.00</div></figcaption>
+						</div>
+						<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="The Lady Beauty Scarlett">
+							<figure class="product-style"><img src="images/product-item7.jpeg" alt="Book"><div class="book-overlay"><button class="read-book-btn">&#128214; Read</button></div></figure>
+							<figcaption><h3>The Lady Beauty Scarlett</h3><span>Arthur Doyle</span><div class="item-price"><span class="prev-price">&#8377; 35.00</span>&#8377; 45.00</div></figcaption>
+						</div>
+						<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Once Upon a Time">
+							<figure class="product-style"><img src="images/product-item8.jpg" alt="Book"><div class="book-overlay"><button class="read-book-btn">&#128214; Read</button></div></figure>
+							<figcaption><h3>Once Upon a Time</h3><span>Klien Marry</span><div class="item-price"><span class="prev-price">&#8377; 25.00</span>&#8377; 35.00</div></figcaption>
+						</div>
+						<div class="product-item book-card" data-pdf="pdfs/kannada.pdf" data-title="Peaceful Life II">
+							<figure class="product-style"><img src="images/product-item2.jpg" alt="Book"><div class="book-overlay"><button class="read-book-btn">&#128214; Read</button></div></figure>
+							<figcaption><h3>Peaceful Life II</h3><span>Vedapeetam</span><div class="item-price">&#8377; 40.00</div></figcaption>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- SUBSCRIBE -->
+<!-- <section id="subscribe">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="row align-items-center">
+					<div class="col-md-6">
+						<div class="title-element">
+							<h2 class="section-title divider">Subscribe to our newsletter</h2>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="subscribe-content" data-aos="fade-up">
+							<p>Receive updates on new spiritual books, discourses, and wisdom from Vedapeetam directly in your inbox.</p>
+							<form id="form" onsubmit="return false;">
+								<input type="email" name="email" placeholder="Enter your email address here">
+								<button class="btn-subscribe" type="submit">
+									<span>Subscribe</span>
+									<i class="icon icon-send"></i>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+<!-- FOOTER -->
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="footer-item">
+					<div class="company-brand">
+						<img src="images/main-logo.png" alt="logo" class="footer-logo">
+						<p>VEDAPEETAM International Spiritual Research Foundation — Free Reading Website</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="footer-menu">
+					<h5>About Us</h5>
+					<ul class="menu-list">
+						<li class="menu-item"><a href="#">Vision</a></li>
+						<li class="menu-item"><a href="#">Articles</a></li>
+						<li class="menu-item"><a href="#">Careers</a></li>
+						<li class="menu-item"><a href="#">Service Terms</a></li>
+						<li class="menu-item"><a href="#">Donate</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="footer-menu">
+					<h5>Discover</h5>
+					<ul class="menu-list">
+						<li class="menu-item"><a href="#">Home</a></li>
+						<li class="menu-item"><a href="#">Books</a></li>
+						<li class="menu-item"><a href="#">Authors</a></li>
+						<li class="menu-item"><a href="#">Subjects</a></li>
+						<li class="menu-item"><a href="#">Search</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="footer-menu">
+					<h5>My Account</h5>
+					<ul class="menu-list">
+						<li class="menu-item"><a href="#">Sign In</a></li>
+						<li class="menu-item"><a href="#">View Cart</a></li>
+						<li class="menu-item"><a href="#">My Wishlist</a></li>
+						<li class="menu-item"><a href="#">Track My Order</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="footer-menu">
+					<h5>Help</h5>
+					<ul class="menu-list">
+						<li class="menu-item"><a href="#">Help Center</a></li>
+						<li class="menu-item"><a href="#">Report a Problem</a></li>
+						<li class="menu-item"><a href="#">Suggest Edits</a></li>
+						<li class="menu-item"><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div id="footer-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="copyright">
+					<div class="row">
+						<div class="col-md-6">
+							<p>&#169; 2026 VEDAPEETAM. All rights reserved. Developed by <a href="" target="_blank">Webnora</a></p>
+						</div>
+						<div class="col-md-6">
+							<div class="social-links align-right">
+								<ul>
+									<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+									<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+									<li><a href="#"><i class="icon icon-youtube-play"></i></a></li>
+									<li><a href="#"><i class="icon icon-behance-square"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+<script src="js/enhanced.js"></script>
+</body>
+</html>

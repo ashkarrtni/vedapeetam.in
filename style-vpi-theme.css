@@ -1,0 +1,457 @@
+/*
+=============================================================
+  VEDAPEETAM — VPI SRF Theme Redesign
+  style-vpi-theme.css
+  Loaded after style.css and style-enhanced.css
+=============================================================*/
+
+/* ── VPI COLOR TOKENS ──────────────────────────────────── */
+:root {
+  --vpi-space-deep:   #0a0a1a;
+  --vpi-space-mid:    #12103a;
+  --vpi-purple-dark:  #1a0b3b;
+  --vpi-purple:       #2d1b6e;
+  --vpi-purple-soft:  #4a2c9e;
+  --vpi-violet:       #6b3fa0;
+  --vpi-rose-glow:    #c4556a;
+  --vpi-gold-bright:  #f5c842;
+  --vpi-gold-warm:    #e8a820;
+  --vpi-white:        #ffffff;
+  --vpi-cream:        #fdf8f0;
+  --vpi-light-bg:     #f4f0fa;
+  --vpi-lighter-bg:   #f8f5fc;
+  --vpi-muted-purple: #e8e0f5;
+
+  /* Page-level backgrounds (lighter variations) */
+  --vpi-page-bg-1:    linear-gradient(160deg, #f4f0fa 0%, #ede5f7 50%, #f5f0fb 100%);
+  --vpi-page-bg-2:    linear-gradient(160deg, #f8f5fc 0%, #eee8f8 100%);
+  --vpi-section-bg:   #f9f6fd;
+}
+
+/*=============================================================
+   HOMEPAGE — HERO SECTION
+=============================================================*/
+
+#billboard {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*background: var(--vpi-space-deep);*/
+}
+
+#about-us {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*background: var(--vpi-space-deep);*/
+}
+
+/* ── Background layer ─────────────────────────────────── */
+.vpi-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(75,30,150,0.85) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 50% at 20% 80%, rgba(196,85,106,0.4) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 45% at 80% 70%, rgba(45,27,110,0.6) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 60% 30%, rgba(107,63,160,0.45) 0%, transparent 55%),
+    linear-gradient(170deg, #0d0a2e 0%, #15082e 30%, #1a0832 55%, #200d3a 80%, #0a0810 100%);
+}
+
+/* Floating soft blobs */
+.vpi-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: vpiFloat 8s ease-in-out infinite;
+}
+.vpi-blob-1 {
+  width: 420px; height: 420px;
+  top: -80px; left: 15%;
+  background: radial-gradient(circle, rgba(100,50,200,0.55) 0%, rgba(180,60,160,0.25) 60%, transparent 80%);
+  animation-delay: 0s;
+}
+.vpi-blob-2 {
+  width: 350px; height: 350px;
+  bottom: 5%; right: 5%;
+  background: radial-gradient(circle, rgba(180,100,220,0.4) 0%, rgba(60,30,100,0.2) 60%, transparent 80%);
+  animation-delay: -3s;
+}
+.vpi-blob-3 {
+  width: 280px; height: 280px;
+  bottom: 20%; left: 5%;
+  background: radial-gradient(circle, rgba(220,80,100,0.35) 0%, transparent 70%);
+  animation-delay: -5s;
+}
+@keyframes vpiFloat {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-22px) scale(1.04); }
+}
+
+/* Subtle star-dust overlay */
+.vpi-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 25%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 60%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 75%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 35%, rgba(255,255,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 82% 55%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 92% 20%, rgba(255,255,255,0.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 18% 80%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 63% 90%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(2px 2px at 47% 48%, rgba(255,255,255,0.35) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ── Hero inner container ──────────────────────────────── */
+.vpi-hero-inner1 {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 60px 20px 70px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.vpi-hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: justify;
+  color: #fff;
+  padding: 60px 20px 70px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Welcome badge ─────────────────────────────────────── */
+.vpi-welcome-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.96);
+  color: #1a1a1a;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 8px 40px;
+  border-radius: 50px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  letter-spacing: 0.5px;
+}
+
+/* ── Hero Title ─────────────────────────────────────────── */
+.vpi-hero-title {
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  margin-bottom: 16px;
+}
+
+/* ── Subtitle ───────────────────────────────────────────── */
+.vpi-hero-subtitle {
+  font-family: 'Jost', sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  font-weight: 700;
+  color: var(--vpi-gold-bright);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+.vpi-subtitle-tag {
+  color: var(--vpi-gold-bright);
+}
+
+/* ── Gurus section label ────────────────────────────────── */
+.vpi-gurus-label {
+  display: inline-block;
+  background: #a51c30;
+  color: #fff;
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 9px 36px;
+  border-radius: 4px;
+  margin-bottom: 38px;
+  box-shadow: 0 4px 14px rgba(165,28,48,0.4);
+}
+
+/* ── Gurus row ──────────────────────────────────────────── */
+.vpi-gurus-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.vpi-guru-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+/* Photo wrapper */
+.vpi-guru-img-wrap {
+  width: 170px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 6px 6px 0 0;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+.vpi-guru-img-wrap.vpi-guru-img-featured {
+  width: 200px;
+  height: 240px;
+  border-color: rgba(245,200,66,0.5);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6), 0 0 30px rgba(245,200,66,0.2);
+}
+
+.vpi-guru-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: brightness(1.05) contrast(1.02);
+}
+
+/* Name + title beneath photo */
+.vpi-guru-info {
+  margin-top: 10px;
+  text-align: center;
+  max-width: 200px;
+}
+.vpi-guru-name {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--vpi-gold-bright);
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+.vpi-guru-title {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.75);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Center guru slightly elevated */
+.vpi-guru-center .vpi-guru-info {
+  max-width: 220px;
+}
+
+/* ── CTA button ─────────────────────────────────────────── */
+.vpi-hero-cta {
+  margin-top: 12px;
+}
+.vpi-cta-btn {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.7);
+  color: #fff;
+  font-family: 'Jost', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 13px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+.vpi-cta-btn:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+
+/*=============================================================
+   GLOBAL BODY BACKGROUND — light purple-inspired
+=============================================================*/
+body {
+  background: var(--vpi-lighter-bg) !important;
+}
+
+
+/*=============================================================
+   OTHER SECTIONS — Lighter variations of the theme
+=============================================================*/
+
+/* Client strip */
+#client-holder {
+  background: linear-gradient(135deg, #eee8f8 0%, #e8e0f5 100%) !important;
+}
+
+/* Featured books — very light purple tint */
+#featured-books {
+  background: linear-gradient(160deg, #f8f5fc 0%, #f2ecfa 100%);
+  position: relative;
+}
+#featured-books::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--vpi-purple-soft), var(--vpi-rose-glow), var(--vpi-gold-warm));
+}
+
+/* Popular books */
+#popular-books {
+  background: linear-gradient(160deg, #f4f0fa 0%, #ede5f7 100%);
+}
+
+/* Best selling / special offer */
+#special-offer {
+  background: linear-gradient(160deg, #f9f6fd 0%, #f0eaf8 100%);
+  position: relative;
+}
+#special-offer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--vpi-gold-warm), var(--vpi-rose-glow), var(--vpi-purple-soft));
+}
+
+/* Subscribe section */
+#subscribe {
+  background: linear-gradient(135deg, #ede0f8 0%, #ddd0f0 100%) !important;
+}
+
+/* Remove old dark header top-bar */
+.top-content {
+  background: linear-gradient(90deg, #1e1040 0%, #2a1260 50%, #1e1040 100%) !important;
+}
+
+/* Header — keep white but add subtle purple border */
+#header {
+  border-bottom: 2px solid rgba(74, 44, 158, 0.15) !important;
+}
+
+/* Footer — keep dark but with purple tint */
+#footer {
+  background: linear-gradient(160deg, #0f0a2a 0%, #1a0f35 100%) !important;
+}
+#footer-bottom {
+  background: #08051a !important;
+}
+
+/* Section accent lines for all sections with section-header */
+.section-header {
+  position: relative;
+}
+
+/* Highlight the section title decorators */
+.section-header .title span {
+  color: var(--vpi-purple-soft) !important;
+}
+
+/* Product cards — subtle purple border on hover */
+.book-card:hover {
+  border-color: rgba(107, 63, 160, 0.4) !important;
+  box-shadow: 0 12px 36px rgba(74, 44, 158, 0.18) !important;
+}
+
+/* CTA buttons on inner sections */
+.btn-accent-arrow {
+  border-bottom-color: var(--vpi-purple-soft) !important;
+}
+.btn-accent-arrow:hover {
+  color: var(--vpi-purple-soft) !important;
+}
+
+/*=============================================================
+   RESPONSIVE
+=============================================================*/
+@media (max-width: 992px) {
+  .vpi-gurus-row {
+    gap: 20px;
+  }
+  .vpi-guru-img-wrap {
+    width: 140px;
+    height: 168px;
+  }
+  .vpi-guru-img-wrap.vpi-guru-img-featured {
+    width: 165px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vpi-hero-title {
+    font-size: clamp(1.3rem, 5vw, 2rem);
+  }
+  .vpi-gurus-row {
+    gap: 14px;
+  }
+  .vpi-guru-img-wrap {
+    width: 110px;
+    height: 135px;
+  }
+  .vpi-guru-img-wrap.vpi-guru-img-featured {
+    width: 130px;
+    height: 160px;
+  }
+  .vpi-guru-name {
+    font-size: 0.6rem;
+  }
+  .vpi-guru-title {
+    font-size: 0.58rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .vpi-gurus-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .vpi-guru-center {
+    order: -1;
+  }
+  .vpi-guru-img-wrap {
+    width: 160px;
+    height: 190px;
+  }
+  .vpi-guru-img-wrap.vpi-guru-img-featured {
+    width: 180px;
+    height: 215px;
+  }
+  .vpi-hero-inner {
+    padding: 50px 16px 60px;
+  }
+}
